@@ -1,0 +1,10 @@
+
+USE CategoryProducts
+
+CREATE OR ALTER PROCEDURE deleteCategory
+  ( @CATEGORYID VARCHAR (255))
+   
+AS
+BEGIN
+     DELETE FROM CategoryProducts WHERE CATEGORYID =@CATEGORYID
+END;
