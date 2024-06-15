@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer'
 import path from 'path';
 import dotenv from 'dotenv';
+import ejs, { name } from 'ejs'
 
 dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 //Create a configuration object
@@ -47,4 +48,8 @@ let messageOption =
     
 }
 
-sendEmail(messageOption)
+// sendEmail(messageOption)
+
+ejs.renderFile("../../Templates/register.ejs",{name:"Jethro Cheruiyot"},(err,data)=>{
+    console.log(data)
+})
