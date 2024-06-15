@@ -8,30 +8,88 @@ Content-Type: application/json
 {
 
     "CATEGORY": "Electronics",
-    "CATEGORYNAME": "SmartPhone"
+    "CATEGORYNAME": "SmartTV 60 INCHES"
 
 }
 
-
-
-
-
 ####
 
-PUT http://localhost:5500/category/
+PUT http://localhost:5500/category/ee80bad8-732c-44ca-a125-8467a75f2c3b
 Content-Type: application/json
 
 {
 
+    
     "CATEGORY": "Electronics",
-    "CATEGORYNAME": "SmartPhone"
+    "CATEGORYNAME": "SmartTV 60 INCHES"
 
+}
+####
+
+PATCH http://localhost:5500/category/ee80bad8-732c-44ca-a125-8467a75f2c3b
+
+####
+
+GET http://localhost:5500/category/ee80bad8-732c-44ca-a125-8467a75f2c3b
+
+####
+
+DELETE http://localhost:5500/category/ee80bad8-732c-44ca-a125-8467a75f2c3b
+
+
+####
+GET  http://localhost:5500/products
+
+Content-Type: application/json
+{
+    "PRODUCTNAME":"SmartTV 60 INCHES",
+    "PRICE" :"Ksh 40000",
+    "CATEGORYID":"ee80bad8-732c-44ca-a125-8467a75f2c3b"
 }
 
 ####
+POST http://localhost:5500/products
 
-GET http://localhost:5500/category/7172e70b-48fa-401f-aa58-7db114d86a5e
+Content-Type: application/json
+{
+    "PRODUCTNAME":"SmartTV 60 INCHES",
+    "PRICE" :"Ksh 40000",
+    "CATEGORYID":"ee80bad8-732c-44ca-a125-8467a75f2c3b"
+}
+
+####
+GET  http://localhost:5500/auth
+
+Content-Type: application/json
+{
+    "Name": "Jethro",
+    "Email": "2000",
+    "Password": "Jeth200*#"
+}
+
 
 ####
 
-DELETE http://localhost:5500/category/7172e70b-48fa-401f-aa58-7db114d86a5e
+POST http://localhost:5500/auth/register
+Content-Type: application/json
+
+{
+    "Name": "Elisha",
+    "Email": "elisha.nzau@gmail.com",
+    "Password": "Jeth2000*#"
+}
+####f
+
+POST http://localhost:5500/auth/login
+Content-Type: application/json
+
+{
+
+    "Email": "elisha.nzau@gmail.com",
+    "Password": "Jeth2000*#"
+}
+####
+
+Get http://localhost:5500/auth/category
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIzYzk0YjYzMS0xMWI1LTQ3NTUtYTQ2Zi00MDViNjQ2MjEzZmIiLCJOYW1lIjoiRWxpc2hhIiwiaWF0IjoxNzE4Mjk2OTg2LCJleHAiOjE3MTgzMDQxODZ9.SlStiA83EBEPFuXQsEHr7RUrtOwjXeQE66rOhlMfu2A
+

@@ -1,4 +1,4 @@
-USE CategoryProducts
+
 
 CREATE OR ALTER PROCEDURE deleteProduct(@PRODUCTID VARCHAR(255))
 AS

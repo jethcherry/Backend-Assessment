@@ -1,7 +1,7 @@
-import mssql from 'mssql';
+
 import path from 'path';
 import dotenv from 'dotenv';
-import { log } from 'console';
+
 
 dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
