@@ -1,9 +1,10 @@
 import nodemailer from 'nodemailer'
 import path from 'path';
 import dotenv from 'dotenv';
-import ejs, { name } from 'ejs'
+import ejs from 'ejs'
 
 dotenv.config({ path: path.resolve(__dirname, "../../.env") });
+
 //Create a configuration object
 
 let config = {
@@ -37,19 +38,27 @@ async function sendEmail(messageOption:any) {
     })
     
 }
-let messageOption =
-{
-    to:process.env.EMAIL,
-    from:process.env.EMAIL,
-    cc:'',
-    bcc:[],
-    subject:"testing email",
-    html:''
+
+
+
+
+ejs.renderFile(path.join(__dirname, '../../Templates/register.ejs'), { name: "Jethro Cheruiyot" }, (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
     
-}
+    let messageOption = {
+    to: process.env.EMAIL,
+    from: process.env.EMAIL,
+    cc: '',
+    bcc: [],
+    subject: "Testing Email",
+    html: data // Use the rendered HTML content
+};
 
-// sendEmail(messageOption)
-
-ejs.renderFile("../../Templates/register.ejs",{name:"Jethro Cheruiyot"},(err,data)=>{
-    console.log(data)
+  
+    sendEmail(messageOption)
 })
+
+
