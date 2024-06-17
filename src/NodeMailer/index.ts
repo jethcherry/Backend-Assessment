@@ -3,6 +3,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import ejs from 'ejs'
 
+
 dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 //Create a configuration object

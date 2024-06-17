@@ -6,8 +6,10 @@ export interface User
    Password:string;
    isDeleted:number
    isEmailSent:boolean
+   
 
 }
+
 export interface Payload
 {
    Sub:string;

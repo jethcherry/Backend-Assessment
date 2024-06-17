@@ -7,21 +7,21 @@ Content-Type: application/json
 
 {
 
-    "CATEGORY": "Electronics",
-    "CATEGORYNAME": "SmartTV 60 INCHES"
+    "CATEGORY": "Kitchen Apliances",
+    "CATEGORYNAME": "Gas Cooker"
 
 }
 
 ####
 
-PUT http://localhost:5500/category/ee80bad8-732c-44ca-a125-8467a75f2c3b
+PUT http://localhost:5500/category
 Content-Type: application/json
 
 {
 
     
-    "CATEGORY": "Electronics",
-    "CATEGORYNAME": "SmartTV 60 INCHES"
+ "CATEGORY": "Kitchen Apliances",
+ "CATEGORYNAME": "Gas Cooker"
 
 }
 ####
@@ -42,9 +42,9 @@ GET  http://localhost:5500/products
 
 Content-Type: application/json
 {
-    "PRODUCTNAME":"SmartTV 60 INCHES",
-    "PRICE" :"Ksh 40000",
-    "CATEGORYID":"ee80bad8-732c-44ca-a125-8467a75f2c3b"
+   "CATEGORY": "Kitchen Apliances",
+   "PRICE":2700,
+    "CATEGORYNAME":"Gas Cooker"
 }
 
 ####

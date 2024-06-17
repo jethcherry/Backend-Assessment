@@ -7,8 +7,9 @@ import Bcrypt from 'bcrypt';
 import { User } from "../Models/authModel";
 import { Payload  } from "../Models/authModel";
 import jwt from "jsonwebtoken";
+import { DbHelper } from "../DatabaseHelpers";
 
-
+const dbInstance = new DbHelper
 export const registerUser = async (req: Request, res: Response) => {
     try {
         const id = uid();
